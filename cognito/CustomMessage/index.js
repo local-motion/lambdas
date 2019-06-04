@@ -1,7 +1,7 @@
 exports.handler = (event, context, callback) => {
     
     // Signup message
-        if(event.triggerSource === "CustomMessage_SignUp") {
+        if(event.triggerSource === "CustomMessage_SignUp" || event.triggerSource === "CustomMessage_ResendCode") {
             var username = event.userName
             var verificationCode = event.request.codeParameter
             
